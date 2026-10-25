@@ -10,39 +10,41 @@
   --bg-glass: rgba(12, 12, 16, 0.72);
   --bg-glass-card: rgba(16, 16, 22, 0.60);
   --bg-glass-card-hover: rgba(24, 24, 32, 0.85);
-  
+
   --border-subtle: rgba(255, 255, 255, 0.08);
   --border-subtle-glow: rgba(0, 214, 255, 0.25);
   --border-glass: rgba(255, 255, 255, 0.12);
-  
+
   --accent-blue: #0050FF;
   --accent-cyan: #00D6FF;
   --accent-gradient: linear-gradient(135deg, #0050FF 0%, #00D6FF 100%);
   --accent-gradient-glow: 0 0 25px rgba(0, 214, 255, 0.35);
-  
+
   --accent-brass: #C5A059;
   --accent-brass-light: #E5C07B;
   --accent-brass-gradient: linear-gradient(135deg, #C5A059 0%, #F3D99A 50%, #A67C33 100%);
-  
+
   --text-white: rgba(255, 255, 255, 0.95);
   --text-primary: rgba(255, 255, 255, 0.90);
   --text-muted: rgba(255, 255, 255, 0.60);
   --text-dim: rgba(255, 255, 255, 0.38);
-  
+
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', sans-serif;
   --font-serif-brand: 'Playfair Display', Georgia, serif;
-  
+
   --radius-sm: 8px;
   --radius-md: 14px;
   --radius-lg: 24px;
   --radius-full: 9999px;
-  
+
   --nav-height: 54px;
   --transition-smooth: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Base Reset & Smooth Page Setup */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -73,13 +75,16 @@ body {
 ::-webkit-scrollbar {
   width: 6px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--bg-primary);
 }
+
 ::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.18);
   border-radius: 3px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(0, 214, 255, 0.45);
 }
@@ -94,19 +99,23 @@ body {
 .tracking-tight {
   letter-spacing: -0.035em;
 }
+
 .tracking-wide {
   letter-spacing: 0.12em;
 }
+
 .text-gradient {
   background: linear-gradient(180deg, #FFFFFF 30%, rgba(255, 255, 255, 0.72) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .text-gradient-cyan {
   background: linear-gradient(135deg, #FFFFFF 40%, #00D6FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .text-gradient-brass {
   background: var(--accent-brass-gradient);
   -webkit-background-clip: text;
@@ -286,13 +295,28 @@ body {
   transition: height 0.15s ease;
 }
 
-.nav-audio-btn.playing .audio-bar:nth-child(1) { animation: bounce 0.8s infinite ease-in-out; }
-.nav-audio-btn.playing .audio-bar:nth-child(2) { animation: bounce 0.6s infinite ease-in-out 0.2s; }
-.nav-audio-btn.playing .audio-bar:nth-child(3) { animation: bounce 0.9s infinite ease-in-out 0.4s; }
+.nav-audio-btn.playing .audio-bar:nth-child(1) {
+  animation: bounce 0.8s infinite ease-in-out;
+}
+
+.nav-audio-btn.playing .audio-bar:nth-child(2) {
+  animation: bounce 0.6s infinite ease-in-out 0.2s;
+}
+
+.nav-audio-btn.playing .audio-bar:nth-child(3) {
+  animation: bounce 0.9s infinite ease-in-out 0.4s;
+}
 
 @keyframes bounce {
-  0%, 100% { height: 3px; }
-  50% { height: 12px; }
+
+  0%,
+  100% {
+    height: 3px;
+  }
+
+  50% {
+    height: 12px;
+  }
 }
 
 /* Apple-style CTA Button */
@@ -336,7 +360,8 @@ body {
 .scrolly-container {
   position: relative;
   width: 100%;
-  height: 400vh; /* Deliberate, cinematic scroll journey (dynamically updated per perspective) */
+  height: 400vh;
+  /* Deliberate, cinematic scroll journey (dynamically updated per perspective) */
   background: var(--bg-primary);
 }
 
@@ -562,8 +587,17 @@ body {
 }
 
 @keyframes pulseGlow {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.4; transform: scale(0.8); }
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.4;
+    transform: scale(0.8);
+  }
 }
 
 .hero-title {
@@ -636,8 +670,15 @@ body {
 }
 
 @keyframes mouseWheel {
-  0% { transform: translate(-50%, 0); opacity: 1; }
-  100% { transform: translate(-50%, 10px); opacity: 0; }
+  0% {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-50%, 10px);
+    opacity: 0;
+  }
 }
 
 /* Beat 2: Left-Aligned Engineering Reveal */
@@ -805,8 +846,15 @@ body {
 }
 
 @keyframes hotspotRadar {
-  0% { transform: scale(0.6); opacity: 1; }
-  100% { transform: scale(1.6); opacity: 0; }
+  0% {
+    transform: scale(0.6);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
 }
 
 .hotspot-pin:hover .hotspot-core {
@@ -1606,17 +1654,23 @@ body {
   .site-nav {
     padding: 0 1.25rem;
   }
+
   .nav-center {
     display: none;
   }
-  .beat-engineering, .beat-anc, .beat-sound {
+
+  .beat-engineering,
+  .beat-anc,
+  .beat-sound {
     left: 4vw;
     right: 4vw;
     max-width: 100%;
   }
+
   .glass-story-card {
     padding: 1.6rem;
   }
+
   .perspective-switcher-wrap {
     bottom: 1.2rem;
     scale: 0.9;
