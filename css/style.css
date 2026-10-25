@@ -1,5 +1,5 @@
 /* ==========================================================================
-   MARSHALL MONITOR III A.N.C. — LUXURY AESTHETIC DESIGN SYSTEM
+   MARSHALL MONITOR III A.N.C. â€” LUXURY AESTHETIC DESIGN SYSTEM
    Crafted for Apple-Grade Scrollytelling, Hardware Acceleration & Glassmorphism
    ========================================================================== */
 
@@ -145,7 +145,7 @@ body {
 }
 
 /* ==========================================================================
-   NAVIGATION BAR — APPLE ULTRA-MINIMAL GLASSMORPHISM
+   NAVIGATION BAR â€” APPLE ULTRA-MINIMAL GLASSMORPHISM
    ========================================================================== */
 .site-nav {
   position: fixed;
@@ -355,7 +355,7 @@ body {
 }
 
 /* ==========================================================================
-   SCROLLYTELLING CONTAINER — PINNED 450vh CANVAS EXPERIENCE
+   SCROLLYTELLING CONTAINER â€” PINNED 450vh CANVAS EXPERIENCE
    ========================================================================== */
 .scrolly-container {
   position: relative;
@@ -521,7 +521,7 @@ body {
 }
 
 /* ==========================================================================
-   STORYTELLING BEATS — EDITORIAL OVERLAYS
+   STORYTELLING BEATS â€” EDITORIAL OVERLAYS
    ========================================================================== */
 .story-overlay {
   position: absolute;
@@ -1049,7 +1049,7 @@ body {
 }
 
 /* ==========================================================================
-   EDITORIAL STORY SECTION — INTERACTIVE LABS BELOW SCROLLEFFECT
+   EDITORIAL STORY SECTION â€” INTERACTIVE LABS BELOW SCROLLEFFECT
    ========================================================================== */
 .section-lab {
   position: relative;
@@ -1553,7 +1553,7 @@ body {
 }
 
 .in-the-box-list li::before {
-  content: '✓';
+  content: 'âœ“';
   color: var(--accent-cyan);
   font-weight: bold;
 }
@@ -1579,7 +1579,7 @@ body {
 }
 
 /* ==========================================================================
-   FOOTER — APPLE/MARSHALL EDITORIAL
+   FOOTER â€” APPLE/MARSHALL EDITORIAL
    ========================================================================== */
 .site-footer {
   background: var(--bg-primary);
@@ -1647,6 +1647,36 @@ body {
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   flex-wrap: wrap;
   gap: 1rem;
+}
+
+.footer-developer-credit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  letter-spacing: 0.02em;
+  flex-wrap: wrap;
+}
+
+.footer-developer-credit span {
+  opacity: 0.6;
+}
+
+.footer-developer-credit a {
+  color: var(--accent-cyan, #00e5ff);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.footer-developer-credit a:hover {
+  color: #fff;
+  text-shadow: 0 0 8px rgba(0, 229, 255, 0.4);
 }
 
 /* Responsive adjustments */
