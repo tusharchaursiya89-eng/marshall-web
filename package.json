@@ -1,0 +1,13 @@
+{
+  "name": "marshell-web",
+  "version": "1.0.0",
+  "description": "Marshell Web - Headphone product website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["headphone", "product", "web"],
+  "author": "",
+  "license": "ISC"
+}

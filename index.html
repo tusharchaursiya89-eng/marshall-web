@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marshall Monitor III A.N.C. — Silence, Perfected. Flagship Wireless Headphones</title>
+  <meta name="description" content="Experience the all-new Marshall Monitor III A.N.C. flagship wireless noise cancelling headphones. 100 hours playtime, spatial soundstage, and studio-grade precision.">
+  <meta name="keywords" content="Marshall Monitor III A.N.C, wireless headphones, active noise cancellation, luxury audio, Apple level design">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Marshall Monitor III A.N.C. — Silence, Perfected">
+  <meta property="og:description" content="Flagship wireless noise cancelling, re-engineered for a world that never stops.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Inter & Playfair Display for Marshall signature cursive -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       APPLE-STYLE ULTRA-MINIMAL TOP NAVIGATION BAR
+       ========================================================================== -->
+  <header class="site-nav" id="siteNav">
+    <div class="nav-left">
+      <a href="#" class="brand-logo-wrap" aria-label="Marshall Home">
+        <span class="marshall-script-logo">Marshall</span>
+        <span class="nav-product-tag">Monitor III A.N.C.</span>
+      </a>
+    </div>
+
+    <nav class="nav-center" aria-label="Product Navigation">
+      <a href="#scrollyHero" class="nav-link active">Overview</a>
+      <a href="#beatEngineering" class="nav-link">Technology</a>
+      <a href="#soundLab" class="nav-link">Noise Cancelling</a>
+      <a href="#batterySection" class="nav-link">Battery</a>
+      <a href="#specsSection" class="nav-link">Specs</a>
+    </nav>
+
+    <div class="nav-right">
+      <!-- Interactive Nav Sound Toggle -->
+      <button class="nav-audio-btn" id="navAudioBtn" title="Toggle Marshall Audio Experience" aria-label="Toggle Sound">
+        <div class="audio-bars">
+          <div class="audio-bar"></div>
+          <div class="audio-bar"></div>
+          <div class="audio-bar"></div>
+        </div>
+        <span class="audio-label">Sound Experience</span>
+      </button>
+
+      <!-- Apple-style Gradient CTA -->
+      <a href="#buy" class="btn-cta-nav trigger-buy-drawer" id="navCtaBtn">
+        Experience MONITOR III A.N.C.
+      </a>
+    </div>
+
+    <!-- Scroll Progress Line -->
+    <div class="nav-progress-bar" id="navProgressBar"></div>
+  </header>
+
+  <!-- ==========================================================================
+       SCROLL-LINKED IMAGE SEQUENCE CONTAINER (PINNED 480vh FULL-SCREEN CANVAS)
+       ========================================================================== -->
+  <main class="scrolly-container" id="scrollyHero">
+    <div class="scrolly-sticky">
+
+      <!-- Ambient Glow Behind Product -->
+      <div class="ambient-glow-center"></div>
+
+      <!-- Hardware-Accelerated Sequence Canvas -->
+      <canvas id="sequenceCanvas" class="sequence-canvas"></canvas>
+
+      <!-- Loading / Buffering Overlay -->
+      <div class="loader-overlay" id="loaderOverlay">
+        <div class="loader-brand">Marshall</div>
+        <div class="loader-sub">Monitor III A.N.C. • Loading Experience</div>
+        <div class="loader-bar-track">
+          <div class="loader-bar-fill" id="loaderBarFill"></div>
+        </div>
+        <div class="loader-percent" id="loaderPercent">0%</div>
+      </div>
+
+      <!-- Angle & Perspective Switcher Bar Floating On Canvas -->
+      <div class="perspective-switcher-wrap" id="perspectiveSwitcher" title="Switch 3D View Angle">
+        <button class="perspective-btn active" data-perspective="horizontal">
+          <span class="dot-indicator"></span> Horizontal Explosion
+        </button>
+        <button class="perspective-btn" data-perspective="vertical">
+          <span class="dot-indicator"></span> Vertical Architecture
+        </button>
+        <button class="perspective-btn" data-perspective="driver">
+          <span class="dot-indicator"></span> Dynamic Driver
+        </button>
+      </div>
+
+      <!-- ======================================================================
+           INTERACTIVE COMPONENT HOTSPOTS (Visible during peak exploded view)
+           ====================================================================== -->
+      <div class="hotspots-container" id="hotspotsContainer">
+        <!-- Hotspot 1: Driver & Voice Coil -->
+        <div class="hotspot-pin" style="left: 38%; top: 56%;" data-part="driver" title="Inspect Custom Driver">
+          <div class="hotspot-ring"></div>
+          <div class="hotspot-core"></div>
+          <div class="hotspot-tooltip">
+            <span class="tooltip-title">Custom 32mm Dynamic Driver</span>
+            <span class="tooltip-desc">Click to inspect acoustic transducer specs</span>
+          </div>
+        </div>
+
+        <!-- Hotspot 2: Adaptive ANC Microphone Array -->
+        <div class="hotspot-pin" style="left: 64%; top: 58%;" data-part="ancMics" title="Inspect ANC Mics">
+          <div class="hotspot-ring"></div>
+          <div class="hotspot-core"></div>
+          <div class="hotspot-tooltip">
+            <span class="tooltip-title">Quad-Beamforming ANC Mics</span>
+            <span class="tooltip-desc">Click to inspect noise cancellation sensors</span>
+          </div>
+        </div>
+
+        <!-- Hotspot 3: Multi-Directional Brass Knob -->
+        <div class="hotspot-pin" style="left: 26%; top: 53%;" data-part="brassKnob" title="Inspect Brass Knob">
+          <div class="hotspot-ring"></div>
+          <div class="hotspot-core"></div>
+          <div class="hotspot-tooltip">
+            <span class="tooltip-title">Multi-Directional Brass Knob</span>
+            <span class="tooltip-desc">Click to inspect tactile 5-way control dial</span>
+          </div>
+        </div>
+
+        <!-- Hotspot 4: Bluetooth 5.3 & DAC PCB -->
+        <div class="hotspot-pin" style="left: 50%; top: 54%;" data-part="pcb" title="Inspect DSP Circuit">
+          <div class="hotspot-ring"></div>
+          <div class="hotspot-core"></div>
+          <div class="hotspot-tooltip">
+            <span class="tooltip-title">Bluetooth 5.3 LE DSP Board</span>
+            <span class="tooltip-desc">Click to inspect Auracast & processing board</span>
+          </div>
+        </div>
+
+        <!-- Hotspot 5: Headband & Stainless Steel Slider -->
+        <div class="hotspot-pin" style="left: 50%; top: 22%;" data-part="headband" title="Inspect Headband">
+          <div class="hotspot-ring"></div>
+          <div class="hotspot-core"></div>
+          <div class="hotspot-tooltip">
+            <span class="tooltip-title">Collapsible Steel Headband</span>
+            <span class="tooltip-desc">Click to inspect tour-tested rugged chassis</span>
+          </div>
+        </div>
+
+        <!-- Hotspot 6: Memory Foam Cushion -->
+        <div class="hotspot-pin" style="left: 12%; top: 55%;" data-part="cushions" title="Inspect Cushion">
+          <div class="hotspot-ring"></div>
+          <div class="hotspot-core"></div>
+          <div class="hotspot-tooltip">
+            <span class="tooltip-title">Memory Foam Ear Cushions</span>
+            <span class="tooltip-desc">Click to inspect acoustic seal & comfort</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ======================================================================
+           STORYTELLING BEATS — SYNCHRONIZED EDITORIAL OVERLAYS
+           ====================================================================== -->
+      <div class="story-overlay">
+
+        <!-- BEAT 1: HERO / INTRO (0 - 16% SCROLL) -->
+        <div class="story-beat beat-hero active" id="beatHero">
+          <div class="hero-pill-badge">
+            <span class="pulse-dot"></span>
+            Up to 100 Hours Playtime • Soundstage Spatial Audio
+          </div>
+          <h1 class="hero-title text-gradient tracking-tight">Marshall Monitor III A.N.C.</h1>
+          <p class="hero-subtitle text-gradient-cyan">Silence, perfected. Hear only what matters.</p>
+          <p class="hero-body">
+            Flagship wireless noise cancelling, re‑engineered for a world that never stops. Tour-tested Marshall acoustic heritage meets cutting-edge spatial isolation.
+          </p>
+          <div class="hero-actions">
+            <button class="btn-primary trigger-buy-drawer">
+              Experience MONITOR III A.N.C.
+            </button>
+            <a href="#beatEngineering" class="btn-secondary" id="exploreBtn">
+              Explore Architecture ↓
+            </a>
+          </div>
+
+          <!-- Animated Scroll Wheel Indicator -->
+          <div class="scroll-indicator-wrap" id="scrollIndicator">
+            <div class="scroll-mouse-icon">
+              <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll to Disassemble</span>
+          </div>
+        </div>
+
+        <!-- BEAT 2: ENGINEERING REVEAL (16 - 42% SCROLL) -->
+        <div class="story-beat beat-engineering" id="beatEngineering">
+          <div class="glass-story-card">
+            <div class="beat-kicker">
+              <span>01</span> / ACOUSTIC ARCHITECTURE
+            </div>
+            <h2 class="beat-headline text-gradient">Precision-engineered for silence.</h2>
+            <p class="beat-text">
+              Custom drivers, sealed acoustic chambers, and optimized airflow deliver studio-grade clarity. Every component is tuned for balance, power, and comfort—hour after hour.
+            </p>
+            <div class="beat-specs-list">
+              <div class="beat-spec-item">
+                <span class="spec-icon-cyan">◆</span>
+                <span>Custom 32mm dynamic drivers tuned for tight sub-bass and pristine transient response.</span>
+              </div>
+              <div class="beat-spec-item">
+                <span class="spec-icon-cyan">◆</span>
+                <span>Sealed back cavity preventing acoustic bleed and optimizing passive isolation.</span>
+              </div>
+              <div class="beat-spec-item">
+                <span class="spec-icon-cyan">◆</span>
+                <span>Precision-milled cast metal hinges allowing rugged fold-and-go portability.</span>
+              </div>
+            </div>
+            <div class="pill-tag-group">
+              <span class="pill-tag">32mm Dynamic Transducer</span>
+              <span class="pill-tag">Acoustic Airflow Port</span>
+              <span class="pill-tag">Solid Brass Knurl</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- BEAT 3: NOISE CANCELLING & MICROPHONES (42 - 66% SCROLL) -->
+        <div class="story-beat beat-anc" id="beatAnc">
+          <div class="glass-story-card">
+            <div class="beat-kicker">
+              <span>02</span> / INTELLIGENT ISOLATION
+            </div>
+            <h2 class="beat-headline text-gradient-cyan">Adaptive noise cancelling, redefined.</h2>
+            <p class="beat-text">
+              Equipped with continuous digital acoustic sampling that samples external surroundings 1,000 times per second to generate real-time anti-phase isolation.
+            </p>
+            <div class="beat-specs-list">
+              <div class="beat-spec-item">
+                <span class="spec-icon-cyan">◆</span>
+                <span><strong>Multi-microphone array</strong> listens in every direction with directional beamforming.</span>
+              </div>
+              <div class="beat-spec-item">
+                <span class="spec-icon-cyan">◆</span>
+                <span><strong>Real-time noise analysis</strong> continuously adjusts to your evolving environment.</span>
+              </div>
+              <div class="beat-spec-item">
+                <span class="spec-icon-cyan">◆</span>
+                <span><strong>Your music stays pure</strong>—turbulent planes, trains, and crowds fade away.</span>
+              </div>
+            </div>
+            <div class="pill-tag-group">
+              <span class="pill-tag">Adaptive ANC</span>
+              <span class="pill-tag">Wind Noise Shield</span>
+              <span class="pill-tag">Transparency Pass</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- BEAT 4: SOUND & UPSCALING (66 - 85% SCROLL) -->
+        <div class="story-beat beat-sound" id="beatSound">
+          <div class="glass-story-card">
+            <div class="beat-kicker">
+              <span>03</span> / MARSHALL SOUNDSTAGE
+            </div>
+            <h2 class="beat-headline text-gradient">Immersive, lifelike sound.</h2>
+            <p class="beat-text">
+              High-performance drivers unlock detail, depth, and texture in every track. AI-enhanced upscaling restores clarity to compressed audio, so every note feels alive.
+            </p>
+            <div class="beat-specs-list">
+              <div class="beat-spec-item">
+                <span class="spec-icon-cyan">◆</span>
+                <span><strong>Marshall Soundstage</strong> creates an expansive virtual acoustic room around your head.</span>
+              </div>
+              <div class="beat-spec-item">
+                <span class="spec-icon-cyan">◆</span>
+                <span><strong>Next-Gen Bluetooth LE Audio</strong> with Auracast™ broadcast sharing capability.</span>
+              </div>
+              <div class="beat-spec-item">
+                <span class="spec-icon-cyan">◆</span>
+                <span><strong>Custom EQ curves</strong> easily configurable via the Marshall Bluetooth companion app.</span>
+              </div>
+            </div>
+            <div class="pill-tag-group">
+              <span class="pill-tag">Soundstage 3D</span>
+              <span class="pill-tag">Bluetooth 5.3 LE</span>
+              <span class="pill-tag">Auracast™ Broadcast</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- BEAT 5: REASSEMBLY & FINAL HERO CTA (85 - 100% SCROLL) -->
+        <div class="story-beat beat-cta" id="beatCta">
+          <div class="hero-pill-badge" style="border-color: rgba(0, 214, 255, 0.4);">
+            <span class="pulse-dot"></span>
+            The Definitive Flagship Listening Experience
+          </div>
+          <h2 class="hero-title text-gradient tracking-tight">Hear everything. Feel nothing else.</h2>
+          <p class="hero-subtitle text-gradient-brass">MONITOR III A.N.C. Designed for focus, crafted for comfort.</p>
+          <p class="hero-body">
+            Engineered for airports, offices, and everything in between. 70 hours with active noise cancelling, up to 100 hours of pure wireless playtime.
+          </p>
+          <div class="hero-actions">
+            <button class="btn-primary trigger-buy-drawer">
+              Experience MONITOR III A.N.C.
+            </button>
+            <a href="#specsSection" class="btn-secondary">
+              See Full Specs ↓
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       TELEMETRY MODAL DRAWER (Opened via Hotspots)
+       ========================================================================== -->
+  <div class="telemetry-modal" id="telemetryModal" role="dialog" aria-labelledby="telemetryName">
+    <div class="telemetry-header">
+      <span class="telemetry-tag" id="telemetryTag">ACOUSTIC SPEC</span>
+      <button class="telemetry-close-btn" id="telemetryCloseBtn" aria-label="Close telemetry window">✕</button>
+    </div>
+    <h3 class="telemetry-name" id="telemetryName">Custom 32mm Dynamic Transducer</h3>
+    <p class="telemetry-desc" id="telemetryDesc">Detailed engineering explanation...</p>
+    <div class="telemetry-grid" id="telemetryGrid">
+      <!-- Injected dynamically via hotspots.js -->
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       SECTION 1: INTERACTIVE MARSHALL SOUND LAB & ANC SIMULATOR
+       ========================================================================== -->
+  <section class="section-lab" id="soundLab">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-kicker">Interactive Acoustic Lab</div>
+        <h2 class="section-title text-gradient">Silence the chaos. Ignite the music.</h2>
+        <p class="section-desc">
+          Test the real-time Active Noise Cancelling algorithm in our live interactive audio simulator. Toggle between ANC, Transparency, and Raw Environment to hear the isolation in real time.
+        </p>
+      </div>
+
+      <div class="sound-lab-card">
+        <!-- Visualizer Canvas & Live Telemetry -->
+        <div class="sound-visualizer-box">
+          <div class="visualizer-telemetry">
+            <div class="live-anc-badge" id="ancLiveStatus">
+              <span class="pulse"></span> Active Noise Cancelling (–34dB Isolation)
+            </div>
+            <div id="decibelMeter">Internal Noise: 18 dB (Quiet Studio)</div>
+          </div>
+
+          <canvas id="soundVisualizerCanvas" class="sound-visualizer-canvas"></canvas>
+
+          <button class="sound-toggle-master" id="masterSoundToggle">
+            Listen: Marshall Monitor III A.N.C. ▶
+          </button>
+        </div>
+
+        <!-- Interactive Control Console -->
+        <div class="sound-lab-controls">
+          <div class="env-label">Select Isolation Mode</div>
+          <div class="anc-mode-selector">
+            <button class="anc-mode-btn active mode-anc" data-mode="anc">
+              Active Noise Cancelling
+            </button>
+            <button class="anc-mode-btn" data-mode="transparency">
+              Transparency
+            </button>
+            <button class="anc-mode-btn" data-mode="off">
+              ANC Off
+            </button>
+          </div>
+
+          <div class="environment-selector-wrap">
+            <div class="env-label">Simulate Ambient Environment</div>
+            <div class="env-buttons-grid">
+              <button class="env-btn active" data-env="airplane">
+                ✈ Airplane Cabin
+              </button>
+              <button class="env-btn" data-env="subway">
+                🚇 Subway Commute
+              </button>
+              <button class="env-btn" data-env="cafe">
+                ☕ Crowded Café
+              </button>
+            </div>
+          </div>
+
+          <p class="beat-text" style="font-size: 0.85rem; margin-top: 1rem;">
+            Powered by real-time Web Audio API signal filtering. Monitor III A.N.C uses continuous anti-phase acoustic wave generation to neutralize low-frequency drone before it reaches your ear drum.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 2: 100-HOUR UNPRECEDENTED BATTERY POWER
+       ========================================================================== -->
+  <section class="section-lab" id="batterySection" style="background: var(--bg-primary);">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-kicker">Endurance Engineering</div>
+        <h2 class="section-title text-gradient">100 hours of non-stop sound.</h2>
+        <p class="section-desc">
+          Built for globe-trotting tours and months of daily commutes. The most energy-efficient acoustic architecture Marshall has ever produced.
+        </p>
+      </div>
+
+      <div class="battery-grid">
+        <div class="battery-stat-card">
+          <div class="battery-big-num text-gradient-cyan">100<span class="battery-unit">HRS</span></div>
+          <h3 class="battery-card-title">Wireless Playtime</h3>
+          <p class="battery-card-desc">
+            Enjoy up to 100 continuous hours of Bluetooth playback with ANC turned off. More than four full days of unbroken music without touching a charger.
+          </p>
+        </div>
+
+        <div class="battery-stat-card">
+          <div class="battery-big-num text-gradient">70<span class="battery-unit">HRS</span></div>
+          <h3 class="battery-card-title">With Active Noise Cancelling</h3>
+          <p class="battery-card-desc">
+            Even with intense, real-time quad-mic digital noise cancellation active at maximum strength, Monitor III A.N.C delivers an astounding 70 hours.
+          </p>
+        </div>
+
+        <div class="battery-stat-card">
+          <div class="battery-big-num text-gradient-brass">15<span class="battery-unit">MIN</span></div>
+          <h3 class="battery-card-title">Quick Charge = 12 Hours</h3>
+          <p class="battery-card-desc">
+            In a rush before boarding? A 15-minute USB-C boost provides 12 hours of playtime. Full recharge completed in just 2.5 hours.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 3: TECHNICAL SPECIFICATIONS COMPARISON TABLE
+       ========================================================================== -->
+  <section class="specs-section" id="specsSection">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-kicker">Technical Specifications</div>
+        <h2 class="section-title text-gradient">Engineered without compromise.</h2>
+        <p class="section-desc">
+          See how the all-new Monitor III A.N.C. sets a new benchmark in wireless acoustic fidelity and battery longevity.
+        </p>
+      </div>
+
+      <div class="specs-table-wrap">
+        <table class="specs-table">
+          <thead>
+            <tr>
+              <th>Specification</th>
+              <th class="highlight-col">Monitor III A.N.C. (New)</th>
+              <th>Monitor II A.N.C.</th>
+              <th>Major V</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="spec-category">Driver Size & Type</td>
+              <td class="highlight-col">32 mm Custom Dynamic</td>
+              <td>40 mm Dynamic</td>
+              <td>40 mm Dynamic</td>
+            </tr>
+            <tr>
+              <td class="spec-category">Frequency Response</td>
+              <td class="highlight-col">20 Hz – 20,000 Hz</td>
+              <td>20 Hz – 20,000 Hz</td>
+              <td>20 Hz – 20,000 Hz</td>
+            </tr>
+            <tr>
+              <td class="spec-category">Playtime (With ANC)</td>
+              <td class="highlight-col">Up to 70 Hours</td>
+              <td>30 Hours</td>
+              <td>N/A (Passive only)</td>
+            </tr>
+            <tr>
+              <td class="spec-category">Playtime (Without ANC)</td>
+              <td class="highlight-col">Up to 100 Hours</td>
+              <td>45 Hours</td>
+              <td>100+ Hours</td>
+            </tr>
+            <tr>
+              <td class="spec-category">Active Noise Cancelling</td>
+              <td class="highlight-col">Adaptive Quad-Mic Real-Time</td>
+              <td>Standard Dual-Mic</td>
+              <td>None</td>
+            </tr>
+            <tr>
+              <td class="spec-category">Spatial Audio / Soundstage</td>
+              <td class="highlight-col">Yes (Marshall Soundstage 3D)</td>
+              <td>No</td>
+              <td>No</td>
+            </tr>
+            <tr>
+              <td class="spec-category">Bluetooth Version & Tech</td>
+              <td class="highlight-col">Bluetooth 5.3 LE + Auracast™</td>
+              <td>Bluetooth 5.0</td>
+              <td>Bluetooth 5.3 LE</td>
+            </tr>
+            <tr>
+              <td class="spec-category">Quick Charge</td>
+              <td class="highlight-col">15 min = 12 hours</td>
+              <td>15 min = 5 hours</td>
+              <td>15 min = 15 hours</td>
+            </tr>
+            <tr>
+              <td class="spec-category">Weight</td>
+              <td class="highlight-col">250 g (8.8 oz)</td>
+              <td>320 g (11.3 oz)</td>
+              <td>186 g (6.5 oz)</td>
+            </tr>
+            <tr>
+              <td class="spec-category">Controls</td>
+              <td class="highlight-col">Multi-Directional Brass Knob + M-Button</td>
+              <td>Brass Knob + ANC button</td>
+              <td>Brass Knob + M-button</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       APPLE-STYLE PRE-ORDER & BUY SLIDE-OUT DRAWER
+       ========================================================================== -->
+  <div class="buy-drawer-backdrop" id="buyDrawerBackdrop">
+    <aside class="buy-drawer" id="buyDrawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+      <div class="drawer-header">
+        <h2 class="drawer-title" id="drawerTitle">Pre-Order Monitor III A.N.C.</h2>
+        <button class="drawer-close" id="closeBuyDrawer" aria-label="Close drawer">✕</button>
+      </div>
+
+      <div class="drawer-product-preview">
+        <img src="horizontal%20headphone/ezgif-frame-001.jpg" alt="Marshall Monitor III A.N.C." class="drawer-product-thumb">
+        <div>
+          <div style="font-weight: 700; color: #fff; font-size: 1.1rem;">Marshall Monitor III A.N.C.</div>
+          <div style="font-size: 0.8rem; color: var(--text-muted);">Signature Matte Black & Brass</div>
+          <div class="drawer-price text-gradient-cyan">$349.99</div>
+        </div>
+      </div>
+
+      <div class="drawer-option-group">
+        <div class="drawer-option-label">Finish Selection</div>
+        <div class="finish-selector-btn">
+          <div class="finish-swatch">
+            <span class="swatch-circle"></span>
+            <span>Matte Black & Diamond Brass Accent</span>
+          </div>
+          <span style="color: var(--accent-cyan); font-weight: 600;">Selected</span>
+        </div>
+      </div>
+
+      <div class="drawer-option-group">
+        <div class="drawer-option-label">In The Box</div>
+        <ul class="in-the-box-list">
+          <li>Monitor III A.N.C. Flagship Headphones</li>
+          <li>Custom Hard Shell Travel Case with Red Velvet Lining</li>
+          <li>USB-C to USB-C Heavy-Duty Braided Charging Cable</li>
+          <li>3.5 mm Coiled Audio Cable with Knurled Brass Jack</li>
+          <li>Quick Start Guide & Legal Information</li>
+        </ul>
+      </div>
+
+      <div class="drawer-option-group">
+        <div class="drawer-option-label">Official Marshall Guarantee</div>
+        <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.5;">
+          • Free express delivery across all orders<br>
+          • 30-day trial with 100% money-back guarantee<br>
+          • 2-year official Marshall manufacturer warranty
+        </div>
+      </div>
+
+      <button class="drawer-checkout-btn" id="drawerCheckoutBtn">
+        Complete Pre-Order — $349.99
+      </button>
+    </aside>
+  </div>
+
+  <!-- ==========================================================================
+       EDITORIAL FOOTER — APPLE / MARSHALL BRAND COLLABORATION
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="section-container">
+      <div class="footer-top">
+        <div class="footer-brand-statement">
+          <div class="marshall-script-logo">Marshall</div>
+          <p style="line-height: 1.6; margin-bottom: 1rem;">
+            Over 60 years of acoustic rock-and-roll heritage. Handcrafted sound, legendary amplifier DNA, and relentless modern engineering.
+          </p>
+          <p style="color: var(--text-muted); font-size: 0.75rem;">
+            Designed in Stockholm & London.
+          </p>
+        </div>
+
+        <div class="footer-links-grid">
+          <div>
+            <div class="footer-col-title">Product</div>
+            <ul class="footer-col-list">
+              <li><a href="#scrollyHero">Monitor III A.N.C.</a></li>
+              <li><a href="#soundLab">Noise Cancelling Lab</a></li>
+              <li><a href="#batterySection">100h Battery</a></li>
+              <li><a href="#specsSection">Specifications</a></li>
+              <li><a href="#" class="trigger-buy-drawer">Pre-Order</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-col-title">Technology</div>
+            <ul class="footer-col-list">
+              <li><a href="#beatEngineering">Custom Dynamic Drivers</a></li>
+              <li><a href="#beatSound">Marshall Soundstage</a></li>
+              <li><a href="#beatAnc">Adaptive Noise Filter</a></li>
+              <li><a href="#beatSound">Bluetooth LE & Auracast</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-col-title">Support</div>
+            <ul class="footer-col-list">
+              <li><a href="#">User Manuals</a></li>
+              <li><a href="#">Marshall Bluetooth App</a></li>
+              <li><a href="#">Warranty & Repairs</a></li>
+              <li><a href="#">Authorized Retailers</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Marshall Group. All rights reserved. MONITOR is a trademark of Marshall Group AB.
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#" style="color: var(--text-dim); text-decoration: none;">Privacy Policy</a>
+          <a href="#" style="color: var(--text-dim); text-decoration: none;">Terms of Purchase</a>
+          <a href="#" style="color: var(--text-dim); text-decoration: none;">Cookie Preferences</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core Javascript Modules -->
+  <script src="js/canvas-sequence.js"></script>
+  <script src="js/sound-simulator.js"></script>
+  <script src="js/hotspots.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
